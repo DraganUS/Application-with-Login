@@ -1,34 +1,27 @@
 <template>
   <div id="app">
-    <loginForm/>
+    <header>
+ 
+    </header>
+    <router-view/>
+
+    <footer>
+      <p>Copyright 2019</p>
+    </footer>
   </div>
 </template>
 
 <script>
-import loginForm from './components/loginForm.vue'
-
 export default {
-  name: 'app',
-  components: {
-    loginForm,
-  }
+  name: 'App'
 }
 </script>
 
-
 <style>
+
 body {
-  background: #DFE0E3;
-  font-family: sans-serif;
+  margin: 0;
 }
 
-#app {
-  margin-top: 230px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 </style>
-
-
-

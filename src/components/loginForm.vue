@@ -51,7 +51,7 @@ export default {
 
 <style scoped>
 div.formContainer {
-	height: 178px;
+	height: 300px;
 	width: 539px;
 	background: #fff;
 	display: flex;
