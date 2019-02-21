@@ -1,11 +1,16 @@
 <template>
 	<div class="home" >
+		<navMenu/>
 	</div>
 </template>
 
 <script>
+import navMenu from "@/components/navMenu.vue";
 export default {
-	name: 'loginForm',
+	name: 'home',
+	components:{
+		navMenu
+	},
 	data() {
 		return {
 			

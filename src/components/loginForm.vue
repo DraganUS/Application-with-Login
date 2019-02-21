@@ -7,12 +7,12 @@
 		<div class="enterForm">
 			<form>
 				<p>email</p>
-				<input type="email" required>
+				<input type="email" required v-model="email">
 				<p>pssword</p>
-				<input v-bind:type="passType" minlength="8" required >
+				<input v-bind:type="passType" v-model="pass" minlength="8" required >
 				<i id='eye' v-bind:class="eye" v-on:click = "passShow"></i>
 				<div class="submit" >
-					<input type="submit" value="Login" >
+					<input @click="change" type="submit" value="Login" >
 				</div>
 			</form> 
 		</div>
@@ -26,7 +26,9 @@ export default {
 		return {
 			passType: "password",
 			eye: "fas fa-eye",
-			eyeClose: "fas fa-eye-slash"
+			eyeClose: "fas fa-eye-slash",
+			email: "",
+			pass: ""
 			}
 	},
 	methods: {
@@ -40,10 +42,21 @@ export default {
 				 
 				 return this.passType="password",
 				 this.eye = "fas fa-eye";
+				 console.log(this.pass.length);
 
 			 }
 
-		}
+		},
+		 change: function(){
+			 if (
+				 this.email.indexOf('@') !== -1 
+				 && this.email.indexOf('.') !== -1 
+				 && this.pass.length > 7
+			 ) {
+			 		this.$router.push({path: "/home"})		 
+			}
+
+		 }
 	}
 
 }
@@ -52,7 +65,7 @@ export default {
 <style scoped>
 div.formContainer {
 	height: 300px;
-	width: 539px;
+	width: 700px;
 	background: #fff;
 	display: flex;
 	align-items: center;  
@@ -108,7 +121,7 @@ div.enterForm {
 		cursor: pointer;
 		color:#32475C;
 		position: absolute;
-		top:112px;
+		top:121px;
 		left: 156px;
 		}	 
 </style>
