@@ -1,13 +1,6 @@
 <template>
   <div id="app">
-    <header>
- 
-    </header>
     <router-view/>
-
-    <footer>
-      <p>Copyright 2019</p>
-    </footer>
   </div>
 </template>
 
@@ -21,6 +14,7 @@ export default {
 
 body {
   margin: 0;
+  padding: 0;
 }
 
 

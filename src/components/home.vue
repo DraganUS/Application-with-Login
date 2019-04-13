@@ -1,18 +1,19 @@
 <template>
 	<div class="home" >
 		<navMenu/>
-		<car/>
+		
+		<datePicker/>
 	</div>
 </template>
 
 <script>
 import navMenu from "@/components/navMenu.vue";
-import car from "@/components/car.vue";
+import datePicker from "@/components/datePicker";
 export default {
 	name: 'home',
 	components:{
 		navMenu,
-		car
+		datePicker
 	},
 	data() {
 		return {

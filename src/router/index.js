@@ -1,17 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import loginForm from '@/components/loginForm'
 import home from '@/components/home'
+import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    {
-      path: '/loginform',
-      name: 'loginForm',
-      component: loginForm
-    },
     {
       path: '/home',
       name: 'home',
